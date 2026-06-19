@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>delrobo_bringup</name>
+  <version>0.0.0</version>
+  <description>Robot bringup package</description>
+
+  <maintainer email="delrobo@todo.todo">delrobo</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>turtlebot3_bringup</exec_depend>
+  <exec_depend>v4l2_camera</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>aruco_detector</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>

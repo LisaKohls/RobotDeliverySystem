@@ -1,0 +1,6 @@
+camera_top:
+  ros__parameters:
+    image_size: [640, 480]
+    output_encoding: yuv422_yuy2
+    frame_id: camera
+    camera_info_url: "package://delrobo_bringup/config/camera_calibration.yaml"
