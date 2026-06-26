@@ -99,12 +99,13 @@ class CubeDetectorNode(Node):
             self.detection_pub.publish(msg_out)
 
         # ---------------- Debug visualization ----------------
-        debug_frame = draw_detections(frame, detections)
+        if self.debug_pub.get_subscription_count() > 0:
+            debug_frame = draw_detections(frame, detections)
 
-        debug_msg = self.bridge.cv2_to_imgmsg(debug_frame, encoding="bgr8")
-        debug_msg.header = msg.header
+            debug_msg = self.bridge.cv2_to_imgmsg(debug_frame, encoding="bgr8")
+            debug_msg.header = msg.header
 
-        self.debug_pub.publish(debug_msg)
+            self.debug_pub.publish(debug_msg)
 
 
 def main():
